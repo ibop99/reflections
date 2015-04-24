@@ -1,0 +1,58 @@
+
+What happens when you initialize a repository? Why do you need to do it?
+
+to initialise a repository use 
+
+git init
+
+this creates a .git file 
+
+git status
+
+shows that none of the files in the new repository have been committed.
+
+--------------------------------------------------------------------------
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+clarifies the status / readieness of files that will go into a logical commit.
+
+use git add to push files to the staging area
+use git reset to remove files ( git remove lesson_2_reflections )
+use git commit to push files in the staging area to repository
+
+__________________________________________________________________________
+
+git diff with commit ID's compares commits in repository
+git diff without arguments compares working directory with staging area
+git diff --staged compares files in staging area with files in repository
+
+git reset --hard restores changes in working directory and staging area NOT REVERSABLE
+
+-------------------------------------------------------------------------
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+see git diff above
+
+-------------------------------------------------------------------------
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A branch allows development along an experimental path without breaking the main program.
+
+git branch: diisplays branches (an * shows checked out branch)
+git branch name creates a branch with the name 'name'
+
+-------------------------------------------------------------------------
+
+How do the diagrams help you visualize the branch structure?
+
+Commits only know about there parent and log is a chain of parents of commits. Some branches will
+not show up in log views.
+
+git log --graph gives better insight to state of repo.
+
+git checkout -b new_branch_name  ==  git branch new_branch_name
+									 git checkout new_branch_name
+
